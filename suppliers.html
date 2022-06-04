@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <main>
+          <div class="row" width="100px">
+            <h2> Suppliers </h2>
+            <table class="table">
+      <thead>
+        <tr>
+            <th>Supplier ID</th>
+            <th>Supplier Name</th>
+            <th>ZipCode</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+              {% for s in supplier %}
+              <tr class="tbborder">
+                <th> {{s.SupplierID}} </th>
+                <th> {{s.SupplierName}}</th>
+                <th> {{s.ZipCode}}</th>
+                <th> {{s.Telephone}} </th>
+                <th> {{s.email}} </th>
+              </tr>
+
+              {% endfor %}
+              </tbody>
+              </table>
+              </div>
+
+        </main>
+
+ {% endblock %}

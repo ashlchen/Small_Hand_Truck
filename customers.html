@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2>Customers</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Zip</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Category</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in customer %}
+        <tr>
+            <td>{{ c.CustomerID}}</td>
+            <td>{{ c.fname}}</td>
+            <td>{{ c.lname}}</td>
+            <td>{{ c.ZipCode}}</td>
+            <td>{{ c.Telephone}}</td>
+            <td>{{ c.email}}</td>
+            <td>{{ c.Category}}</td>
+            <td><a href="{{url_for('edit',CustomerID= c.CustomerID)}}">
+                <input type="submit" value="Edit" class="btn btn-primary"></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

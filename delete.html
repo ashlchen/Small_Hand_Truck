@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <form action="/delete" method="post">
+        <!-- START Specific to Movie DELETE -->
+        Delete which movie?
+        <input autocomplete="off" autofocus name="movnum" placeholder="Movie Number" type="text">
+        <input type="submit">
+        <!-- END Specific to Movie DELETE -->
+
+
+        <ol>
+        {% for m in message %}
+            <li>{{m.Name}}, {{m.Year}}</li>
+        {% endfor %}
+        </ol>
+    </form>
+
+ {% endblock %}

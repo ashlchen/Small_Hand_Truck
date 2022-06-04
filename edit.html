@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <main class="row">
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6">
+
+        <h2>Edit a Customer</h2>
+
+
+        <form action="/edit" method="post">
+
+            {% if customer is defined %}
+
+                 <label for="CustomerID">Customer ID</label>
+                <input type="text" name="CustomerID" value="{{customer[0]}}" class="form-control" readonly>
+
+            <br>
+
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" value="{{customer[1]}}" class="form-control">
+
+            <br>
+
+
+               <label for="lname">Last Name</label>
+               <input type="text" name="lname" value="{{customer[2]}}" class="form-control">
+
+            <br>
+
+               <label for="ZipCode">Zip Code</label>
+                <input type="text" name="ZipCode" value="{{customer[3]}}" class="form-control">
+
+            <br>
+
+                <label for="Telephone">Telephone</label>
+                <input type="text" name="Telephone" value="{{customer[4]}}" class="form-control">
+
+            <br>
+
+                <label for="email">Email</label>
+                <input type="text" name="email" value="{{customer[5]}}" class="form-control">
+
+            <br>
+
+                <label for="Category">Category</label>
+                <input type="text" name="Category" value="{{customer[6]}}" class="form-control">
+
+            <br>
+
+        {% endif %}
+
+        </select>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+      </div>
+
+
+
+
+        </main>
+
+ {% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <main class="row">
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6">  
+
+        <h2>Add a Customer</h2>  
+  
+        <form action ="/add" method="POST"  >
+
+
+        <label for ="customerid" >Customer ID</label> 
+
+        <input type ="integer"  name="CustomerID" id="CustomerID" required><br>
+        
+       
+        
+        <label for ="fname">First Name</label>
+        <input type ="text" name="fname" id="fname" required>
+        <br>
+       
+        <label for ="lname">Last Name</label> 
+        <input type ="text" name= "lname" id="lname" required>
+        <br>
+
+        <label for ="ZipCode">Zip</label> 
+        <input type ="text" name= "ZipCode" id="ZipCode" required>
+        <br>
+      
+        <label for ="Telephone">Telephone</label>
+        <input type= "integer" name="Telephone" id="Telephone" pattern= "[0-9]{3}[0-9]{3}[0-9]{4}" > <br>
+       
+
+        <label for ="email">Email</label> 
+        <input type="text" name="email" id="email" required><br>
+
+        <label for ="Category">Category</label> 
+        <input type="text" name="Category" id="Category" required><br>
+        
+
+
+        <input class="btn btn-primary" type="submit" name="submit" id="register" value ="Register"> 
+
+        <!--<ol>-->
+        <!--    {% for c in message %}-->
+        <!--    <li>-->
+        <!--        {{c.CustomerID}}-->
+        <!--        {{c.fname}}-->
+        <!--        {{c.lname}}-->
+        <!--        {{c.ZipCode}}-->
+        <!--        {{c.Telephone}}-->
+        <!--        {{c.email}}-->
+        <!--        {{c.Category}}-->
+        <!--    {% endfor %}-->
+        <!--    </li>-->
+            
+            
+        <!--</ol>-->
+        
+
+    
+
+
+
+      </form>
+        
+      </div>
+      
+
+     
+
+        </main>
+
+ {% endblock %}

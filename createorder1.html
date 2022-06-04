@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<main class="row">
+            <h2> Create an Order </h2>
+            <form action="/createorder1" method="POST">
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+
+                <table class="table borderless ">
+                  <tr>
+                    <th colspan="4"><h4> Product details</h4> </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>1 <img src="static/images/p1.JPG" alt="delete" width="50px"></h4>
+                    </td>
+                    <td>
+                      <label for ="Product_ID">Product ID</label><br>
+                      <input type ="number" name= "Product_ID" id="Product_ID" max=12 min=1 required>
+                    </td>
+                    <td>
+                      <label for ="Quantity">Quantity</label><br>
+                      <input type ="number" name= "Quantity" id="Quantity" max=10 min=0 required>
+                    </td>
+                    <td>
+                      <label for ="OrdDet_ID">Order Details ID</label>
+                      <input type ="integer" name= "OrdDet_ID" id="OrdDet_ID" required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>2 <img src="static/images/p2.JPG" alt="delete" width="50px"></h4>
+                    </td>
+                    <td>
+                      <label for ="Product_ID2">Product ID</label><br>
+                      <input type ="number" name= "Product_ID2" id="Product_ID2" max=12 min=1>
+                    </td>
+                    <td>
+                      <label for ="Quantity2">Quantity</label><br>
+                      <input type ="number" name= "Quantity2" id="Quantity2" max=10 min=0>
+                    </td>
+                    <td>
+                      <label for ="OrdDet_ID2">Order Details ID</label>
+                      <input type ="integer" name= "OrdDet_ID2" id="OrdDet_ID2" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>3 <img src="static/images/p1.JPG" alt="delete" width="50px"></h4>
+                    </td>
+                    <td>
+                      <label for ="Product_ID3">Product ID</label><br>
+                      <input type ="number" name= "Product_ID3" id="Product_ID3" max=12 min=1>
+                    </td>
+                    <td>
+                      <label for ="Quantity3">Quantity</label><br>
+                      <input type ="number" name= "Quantity3" id="Quantity3" max=10 min=0>
+                    </td>
+                    <td>
+                      <label for ="OrdDet_ID3">Order Details ID</label>
+                      <input type ="integer" name= "OrdDet_ID3" id="OrdDet_ID3" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>4 <img src="static/images/p1.JPG" alt="delete" width="50px"></h4>
+                    </td>
+                    <td>
+                      <label for ="Product_ID4">Product ID</label><br>
+                      <input type ="number" name= "Product_ID4" id="Product_ID4" max=12 min=1>
+                      </td>
+                    <td>
+                      <label for ="Quantity4">Quantity</label><br>
+                      <input type ="number" name= "Quantity4" id="Quantity4" max=10 min=0>
+                    </td>
+                    <td>
+                      <label for ="OrdDet_ID4">Order Details ID</label>
+                      <input type ="integer" name= "OrdDet_ID4" id="OrdDet_ID4" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>5 <img src="static/images/p1.JPG" alt="delete" width="50px"></h4>
+                    </td>
+                    <td>
+                      <label for ="Product_ID5">Product ID</label><br>
+                      <input type ="number" name= "Product_ID5" id="Product_ID5" max=12 min=1 >
+                    </td>
+                    <td>
+                      <label for ="Quantity5">Quantity</label><br>
+                      <input type ="number" name= "Quantity5" id="Quantity5" max=10 min=0 >
+                    </td>
+                    <td>
+                      <label for ="OrdDet_ID5">Order Details ID</label>
+                      <input type ="integer" name= "OrdDet_ID5" id="OrdDet_ID5" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="4"><h4> Additional details</h4> </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for ="OrderID">Order ID</label>
+                      <input type ="integer" name= "OrderID" id="OrderID" required>
+                    </td>
+                    <td>
+                      <label for ="OrderDate">Order Date</label>
+                      <input type ="text" name= "OrderDate" id="OrderDate" value="dd-mm-yy" required>
+                    </td>
+                    <td>
+                      <label for ="CustomerID">Customer ID</label>
+                      <input type ="integer" name= "CustomerID" id="CustomerID" required>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for ="OrderType">Order Type</label>
+                      <input type ="text" name= "OrderType" id="OrderType" required>
+                    </td>
+                    <td>
+                      <label for ="SalesPerson">Sales Person</label>
+                      <input type ="integer" name= "SalesPerson" id="SalesPerson" required>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <input class="btn btn-primary" type="submit" name="ordercreate" id="ordercreate" value ="Create Order">
+                    </td>
+                  </tr>
+                </table>
+                </div>
+
+        <!--<ol>-->
+        <!--    {% for d in message %}-->
+        <!--    <li>-->
+        <!--        {{d.OrdDet_ID}}-->
+        <!--        {{d.Product_ID}}-->
+        <!--        {{d.OrderID}}-->
+        <!--        {{d.Quantity}}-->
+        <!--    {% endfor %}-->
+        <!--    </li>-->
+
+
+        <!--</ol>-->
+
+        </form>
+
+        </div>
+        </div>
+        </main>
+{% endblock %}

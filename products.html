@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<main class="row">
+          <div class="col-lg-12 col-md-12 col-sm12 col-xs-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Product ID</th>
+                  <th>Product Name</th>
+                  <th>Color</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for p in product %}
+                <tr>
+                  <td>{{p.Product_ID}}</td>
+                  <td>{{p.Product_Name}}</td>
+                  <td>{{p.Color}}</td>
+                  <td>{{p.Price}}</td>
+                </tr>
+                {% endfor %}
+               </tbody>
+             </table>
+          </div>
+        </main>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,88 @@
+<!-- STATIC HTML: NEVER CHANGES -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">	</script>
+
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    <script>
+         $(function () {
+             $( "input" ).change(function() {
+                var max = parseInt($(this).attr('max'));
+                var min = parseInt($(this).attr('min'));
+                if ($(this).val() > max)
+                   {
+                      $(this).val(max);
+                      alert("Select Product ID between 1-12. Max quantity allowed is 10.");
+                   }
+
+                });
+             });
+    </script>
+  </head>
+
+  <body>
+     <div class="container">
+
+     <header class="row ">
+
+            <!-- <div class= "logo col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
+              <!-- <img src="images/comp_icon.jpg" alt="company_icon" width="50px"> -->
+                <h1><img src="/static/images/comp_icon.jpg" alt="company_icon" width="50px"> Smart Hand Trucks Inc
+                <!--<a href="Account.html">-->
+                <!--<span class="glyphicon glyphicon-user"></span></a>-->
+                <!--<a href="Cart.html">-->
+                <!--<span class="glyphicon glyphicon-shopping-cart"></span></a>-->
+
+                </h1>
+
+            <!-- </div>
+             -->
+
+      </header>
+
+      <nav class="navbar navbar-default row">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#MyMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="MyMenu">
+            <ul class="nav navbar-nav">
+              <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li><a href="{{ url_for('suppliers') }}">View Suppliers</a></li>
+              <li><a href="{{ url_for('products') }}">View Products</a></li>
+              <li class="dropdown"><a href="" class="dropdown=toggle" data-toggle="dropdown">Customers
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ url_for('customers') }}" >View/Update Customers</a>
+                <li><a href="{{ url_for('add') }}">Add Customers</a></li>
+              </ul>
+              </li>
+              <li ><a href="{{ url_for('createorder1') }}" >Create Order</a></li>
+            </ul>
+          </div>
+      </nav>
+<!-- END STATIC HTML: NEVER CHANGES -->
+
+<!-- DYNAMIC HTML: CHANGES -->
+                    <!-- the code below is how I START a "placeholder" -->
+                    {% block body %}
+                    {% endblock %}
+                    <!-- the code above is how I END a "placeholder" -->
+<!-- END DYNAMIC HTML: CHANGES -->
+
+<!-- STATIC HTML: NEVER CHANGES -->
+     </div>
+    </body>
+</html>
+<!-- END STATIC HTML: NEVER CHANGES -->
